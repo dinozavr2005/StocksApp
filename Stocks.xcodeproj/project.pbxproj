@@ -18,6 +18,9 @@
 		E78BBEDE2983D4FF0072B252 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78BBEDD2983D4FF0072B252 /* APICaller.swift */; };
 		E78BBEE02983D51A0072B252 /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78BBEDF2983D51A0072B252 /* PersistenceManager.swift */; };
 		E78BBEE22983D5330072B252 /* HapticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78BBEE12983D5330072B252 /* HapticsManager.swift */; };
+		E78BBEE42984142F0072B252 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78BBEE32984142F0072B252 /* Extensions.swift */; };
+		E78BBEE62987BAF40072B252 /* SearchResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78BBEE52987BAF40072B252 /* SearchResultTableViewCell.swift */; };
+		E78BBEE82987D7D70072B252 /* SearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78BBEE72987D7D70072B252 /* SearchResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +37,9 @@
 		E78BBEDD2983D4FF0072B252 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
 		E78BBEDF2983D51A0072B252 /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
 		E78BBEE12983D5330072B252 /* HapticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticsManager.swift; sourceTree = "<group>"; };
+		E78BBEE32984142F0072B252 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		E78BBEE52987BAF40072B252 /* SearchResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultTableViewCell.swift; sourceTree = "<group>"; };
+		E78BBEE72987D7D70072B252 /* SearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +85,7 @@
 		E78BBED22983CD8A0072B252 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				E78BBEE72987D7D70072B252 /* SearchResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -87,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				E78BBEC92983CD130072B252 /* LaunchScreen.storyboard */,
+				E78BBEE52987BAF40072B252 /* SearchResultTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -118,6 +126,7 @@
 				E78BBEC72983CD130072B252 /* Assets.xcassets */,
 				E78BBEBE2983CD120072B252 /* AppDelegate.swift */,
 				E78BBEC02983CD120072B252 /* SceneDelegate.swift */,
+				E78BBEE32984142F0072B252 /* Extensions.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -193,11 +202,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				E78BBEE22983D5330072B252 /* HapticsManager.swift in Sources */,
+				E78BBEE62987BAF40072B252 /* SearchResultTableViewCell.swift in Sources */,
 				E78BBEDC2983CF350072B252 /* StockDetailsViewController.swift in Sources */,
 				E78BBEC32983CD120072B252 /* WatchListViewController.swift in Sources */,
 				E78BBED82983CEDE0072B252 /* TopStoriesNewsViewController.swift in Sources */,
 				E78BBEE02983D51A0072B252 /* PersistenceManager.swift in Sources */,
+				E78BBEE42984142F0072B252 /* Extensions.swift in Sources */,
 				E78BBEDE2983D4FF0072B252 /* APICaller.swift in Sources */,
+				E78BBEE82987D7D70072B252 /* SearchResponse.swift in Sources */,
 				E78BBEBF2983CD120072B252 /* AppDelegate.swift in Sources */,
 				E78BBEC12983CD120072B252 /* SceneDelegate.swift in Sources */,
 				E78BBEDA2983CEF40072B252 /* SearchResultsViewController.swift in Sources */,
