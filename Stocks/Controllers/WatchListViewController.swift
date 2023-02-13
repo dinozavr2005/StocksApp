@@ -8,7 +8,7 @@
 import UIKit
 import FloatingPanel
 
-class WatchListViewController: UIViewController {
+final class WatchListViewController: UIViewController {
 
     private var searchTimer: Timer?
 

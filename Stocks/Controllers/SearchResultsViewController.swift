@@ -11,7 +11,7 @@ protocol SearchResultsViewControllerDelegate: AnyObject {
     func searchResultsViewControllerDidSelect(searchResult: SearchResult)
 }
 
-class SearchResultsViewController: UIViewController {
+final class SearchResultsViewController: UIViewController {
     weak var delegate: SearchResultsViewControllerDelegate?
 
     private var results: [SearchResult] = []
