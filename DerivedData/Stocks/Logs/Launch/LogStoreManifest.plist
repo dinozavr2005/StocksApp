@@ -6,10 +6,10 @@
 	<integer>10</integer>
 	<key>logs</key>
 	<dict>
-		<key>10F93779-036F-413C-9A1A-F2771C36134D</key>
+		<key>0A09AB4F-2D04-49E7-8F73-C241E34C22D9</key>
 		<dict>
 			<key>auxiliaryLogUniqueIdentifier</key>
-			<string>46DCE61E-EA39-4739-BA47-C0C586910DE5</string>
+			<string>F6C78866-8A5A-4380-9517-8E535E94963B</string>
 			<key>auxiliaryObservable</key>
 			<dict>
 				<key>highLevelStatus</key>
@@ -22,7 +22,7 @@
 			<key>domainType</key>
 			<string>com.apple.dt.IDE.LaunchSchemeAction</string>
 			<key>fileName</key>
-			<string>Run-Stocks-2023.02.13_15-13-22-+0800.xcresult</string>
+			<string>Run-Stocks-2023.02.15_16-35-36-+0800.xcresult</string>
 			<key>hasAuxiliaryLog</key>
 			<true/>
 			<key>hasConsoleLog</key>
@@ -43,18 +43,18 @@
 			<key>signature</key>
 			<string>Run Stocks</string>
 			<key>timeStartedRecording</key>
-			<real>697965202.33831203</real>
+			<real>698142936.92997599</real>
 			<key>timeStoppedRecording</key>
 			<real>0.0</real>
 			<key>title</key>
 			<string>Run Stocks</string>
 			<key>uniqueIdentifier</key>
-			<string>10F93779-036F-413C-9A1A-F2771C36134D</string>
+			<string>0A09AB4F-2D04-49E7-8F73-C241E34C22D9</string>
 		</dict>
-		<key>3F5BBBB1-83F6-479D-9DD6-7156026D2D7F</key>
+		<key>D8BDC160-EC98-49D2-9CCD-1D9EE61838AA</key>
 		<dict>
 			<key>auxiliaryLogUniqueIdentifier</key>
-			<string>3DBBC5B3-518C-432F-B91F-4D7AA6A59EEB</string>
+			<string>538F5E98-FB54-4B37-8248-35252BAF42F0</string>
 			<key>auxiliaryObservable</key>
 			<dict>
 				<key>highLevelStatus</key>
@@ -67,7 +67,7 @@
 			<key>domainType</key>
 			<string>com.apple.dt.IDE.LaunchSchemeAction</string>
 			<key>fileName</key>
-			<string>Run-Stocks-2023.02.02_17-37-51-+0800.xcresult</string>
+			<string>Run-Stocks-2023.02.15_16-15-58-+0800.xcresult</string>
 			<key>hasAuxiliaryLog</key>
 			<true/>
 			<key>hasConsoleLog</key>
@@ -88,18 +88,18 @@
 			<key>signature</key>
 			<string>Run Stocks</string>
 			<key>timeStartedRecording</key>
-			<real>697023471.65600204</real>
+			<real>698141758.86865199</real>
 			<key>timeStoppedRecording</key>
 			<real>0.0</real>
 			<key>title</key>
 			<string>Run Stocks</string>
 			<key>uniqueIdentifier</key>
-			<string>3F5BBBB1-83F6-479D-9DD6-7156026D2D7F</string>
+			<string>D8BDC160-EC98-49D2-9CCD-1D9EE61838AA</string>
 		</dict>
-		<key>3F69E642-7FB7-4456-9F7A-B867223E6BE0</key>
+		<key>FE8B1B22-D010-44CC-8356-9985610D9D88</key>
 		<dict>
 			<key>auxiliaryLogUniqueIdentifier</key>
-			<string>4921063B-3A30-4E2B-BD0A-658300C83943</string>
+			<string>45E382A4-D1D7-4415-BFB9-4E320BD3D64A</string>
 			<key>auxiliaryObservable</key>
 			<dict>
 				<key>highLevelStatus</key>
@@ -112,7 +112,7 @@
 			<key>domainType</key>
 			<string>com.apple.dt.IDE.LaunchSchemeAction</string>
 			<key>fileName</key>
-			<string>Run-Stocks-2023.02.13_14-35-11-+0800.xcresult</string>
+			<string>Run-Stocks-2023.02.15_16-37-11-+0800.xcresult</string>
 			<key>hasAuxiliaryLog</key>
 			<true/>
 			<key>hasConsoleLog</key>
@@ -133,103 +133,13 @@
 			<key>signature</key>
 			<string>Run Stocks</string>
 			<key>timeStartedRecording</key>
-			<real>697962911.36021304</real>
+			<real>698143031.36756301</real>
 			<key>timeStoppedRecording</key>
 			<real>0.0</real>
 			<key>title</key>
 			<string>Run Stocks</string>
 			<key>uniqueIdentifier</key>
-			<string>3F69E642-7FB7-4456-9F7A-B867223E6BE0</string>
-		</dict>
-		<key>6538855D-651A-42FD-88C8-2B2A46E32FCC</key>
-		<dict>
-			<key>auxiliaryLogUniqueIdentifier</key>
-			<string>59E55AE9-9587-4DB7-8322-3A06AEC6CF21</string>
-			<key>auxiliaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>className</key>
-			<string>IDESchemeActionsInvocationRecord</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>com.apple.dt.IDE.LaunchSchemeAction</string>
-			<key>fileName</key>
-			<string>Run-Stocks-2023.02.13_14-45-13-+0800.xcresult</string>
-			<key>hasAuxiliaryLog</key>
-			<true/>
-			<key>hasConsoleLog</key>
-			<true/>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>Stocks project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>Stocks</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Run Stocks</string>
-			<key>timeStartedRecording</key>
-			<real>697963513.344661</real>
-			<key>timeStoppedRecording</key>
-			<real>0.0</real>
-			<key>title</key>
-			<string>Run Stocks</string>
-			<key>uniqueIdentifier</key>
-			<string>6538855D-651A-42FD-88C8-2B2A46E32FCC</string>
-		</dict>
-		<key>C88BA084-29B2-4C30-94D7-B1BE567423AE</key>
-		<dict>
-			<key>auxiliaryLogUniqueIdentifier</key>
-			<string>64970F29-2967-47D2-B36B-F4C0E6AED1F3</string>
-			<key>auxiliaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>className</key>
-			<string>IDESchemeActionsInvocationRecord</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>com.apple.dt.IDE.LaunchSchemeAction</string>
-			<key>fileName</key>
-			<string>Run-Stocks-2023.02.13_15-09-43-+0800.xcresult</string>
-			<key>hasAuxiliaryLog</key>
-			<true/>
-			<key>hasConsoleLog</key>
-			<true/>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>Stocks project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>Stocks</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Run Stocks</string>
-			<key>timeStartedRecording</key>
-			<real>697964983.55228603</real>
-			<key>timeStoppedRecording</key>
-			<real>0.0</real>
-			<key>title</key>
-			<string>Run Stocks</string>
-			<key>uniqueIdentifier</key>
-			<string>C88BA084-29B2-4C30-94D7-B1BE567423AE</string>
+			<string>FE8B1B22-D010-44CC-8356-9985610D9D88</string>
 		</dict>
 	</dict>
 </dict>

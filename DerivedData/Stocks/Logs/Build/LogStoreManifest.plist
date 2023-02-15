@@ -6,7 +6,7 @@
 	<integer>10</integer>
 	<key>logs</key>
 	<dict>
-		<key>3DBBC5B3-518C-432F-B91F-4D7AA6A59EEB</key>
+		<key>45E382A4-D1D7-4415-BFB9-4E320BD3D64A</key>
 		<dict>
 			<key>className</key>
 			<string>IDEActivityLogSection</string>
@@ -15,7 +15,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
 			<key>fileName</key>
-			<string>3DBBC5B3-518C-432F-B91F-4D7AA6A59EEB.xcactivitylog</string>
+			<string>45E382A4-D1D7-4415-BFB9-4E320BD3D64A.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -32,15 +32,15 @@
 			<key>signature</key>
 			<string>Build Stocks</string>
 			<key>timeStartedRecording</key>
-			<real>697023471.65613401</real>
+			<real>698143031.36774302</real>
 			<key>timeStoppedRecording</key>
-			<real>697023472.58037496</real>
+			<real>698143032.70092595</real>
 			<key>title</key>
 			<string>Build Stocks</string>
 			<key>uniqueIdentifier</key>
-			<string>3DBBC5B3-518C-432F-B91F-4D7AA6A59EEB</string>
+			<string>45E382A4-D1D7-4415-BFB9-4E320BD3D64A</string>
 		</dict>
-		<key>46DCE61E-EA39-4739-BA47-C0C586910DE5</key>
+		<key>538F5E98-FB54-4B37-8248-35252BAF42F0</key>
 		<dict>
 			<key>className</key>
 			<string>IDEActivityLogSection</string>
@@ -49,7 +49,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
 			<key>fileName</key>
-			<string>46DCE61E-EA39-4739-BA47-C0C586910DE5.xcactivitylog</string>
+			<string>538F5E98-FB54-4B37-8248-35252BAF42F0.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -66,15 +66,15 @@
 			<key>signature</key>
 			<string>Build Stocks</string>
 			<key>timeStartedRecording</key>
-			<real>697965202.33843398</real>
+			<real>698141758.86877596</real>
 			<key>timeStoppedRecording</key>
-			<real>697965203.38670099</real>
+			<real>698141759.74014103</real>
 			<key>title</key>
 			<string>Build Stocks</string>
 			<key>uniqueIdentifier</key>
-			<string>46DCE61E-EA39-4739-BA47-C0C586910DE5</string>
+			<string>538F5E98-FB54-4B37-8248-35252BAF42F0</string>
 		</dict>
-		<key>4921063B-3A30-4E2B-BD0A-658300C83943</key>
+		<key>F6C78866-8A5A-4380-9517-8E535E94963B</key>
 		<dict>
 			<key>className</key>
 			<string>IDEActivityLogSection</string>
@@ -83,7 +83,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
 			<key>fileName</key>
-			<string>4921063B-3A30-4E2B-BD0A-658300C83943.xcactivitylog</string>
+			<string>F6C78866-8A5A-4380-9517-8E535E94963B.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -100,81 +100,13 @@
 			<key>signature</key>
 			<string>Build Stocks</string>
 			<key>timeStartedRecording</key>
-			<real>697962911.36144495</real>
+			<real>698142936.93098795</real>
 			<key>timeStoppedRecording</key>
-			<real>697962914.32596898</real>
+			<real>698142942.83842099</real>
 			<key>title</key>
 			<string>Build Stocks</string>
 			<key>uniqueIdentifier</key>
-			<string>4921063B-3A30-4E2B-BD0A-658300C83943</string>
-		</dict>
-		<key>59E55AE9-9587-4DB7-8322-3A06AEC6CF21</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>59E55AE9-9587-4DB7-8322-3A06AEC6CF21.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>Stocks project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>Stocks</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build Stocks</string>
-			<key>timeStartedRecording</key>
-			<real>697963513.34653103</real>
-			<key>timeStoppedRecording</key>
-			<real>697963514.67621398</real>
-			<key>title</key>
-			<string>Build Stocks</string>
-			<key>uniqueIdentifier</key>
-			<string>59E55AE9-9587-4DB7-8322-3A06AEC6CF21</string>
-		</dict>
-		<key>64970F29-2967-47D2-B36B-F4C0E6AED1F3</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>64970F29-2967-47D2-B36B-F4C0E6AED1F3.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>Stocks project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>Stocks</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build Stocks</string>
-			<key>timeStartedRecording</key>
-			<real>697964983.55242002</real>
-			<key>timeStoppedRecording</key>
-			<real>697964984.52061999</real>
-			<key>title</key>
-			<string>Build Stocks</string>
-			<key>uniqueIdentifier</key>
-			<string>64970F29-2967-47D2-B36B-F4C0E6AED1F3</string>
+			<string>F6C78866-8A5A-4380-9517-8E535E94963B</string>
 		</dict>
 	</dict>
 </dict>

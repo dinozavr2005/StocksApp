@@ -27,12 +27,15 @@ final class NewsViewController: UIViewController {
 
     // MARK: - Properties
 
-    private var stories = [String]()
+    private var stories: [NewsStory] = [
+        NewsStory(category: "tech", datetime: 123, headline: "Some headline", id: 1, image: "", related: "Related", source: "SNBC", summary: "", url: "")
+        ]
 
     let tableView: UITableView = {
         let table = UITableView()
         table.backgroundColor = .clear
         table.register(NewsHeaderView.self, forHeaderFooterViewReuseIdentifier: NewsHeaderView.identifier)
+        table.register(NewsStoryTableViewCell.self, forCellReuseIdentifier: NewsStoryTableViewCell.identifier)
         return table
     }()
 
@@ -80,11 +83,16 @@ final class NewsViewController: UIViewController {
 
 extension NewsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return stories.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: NewsStoryTableViewCell.identifier,
+                                                       for: indexPath) as? NewsStoryTableViewCell else {
+            fatalError()
+        }
+        cell.configure(with: .init(model: stories[indexPath.row]))
+        return cell
     }
 
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -96,7 +104,7 @@ extension NewsViewController: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 140
+        return NewsStoryTableViewCell.preferredHeight
     }
 
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
