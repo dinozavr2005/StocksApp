@@ -6,10 +6,10 @@
 	<integer>10</integer>
 	<key>logs</key>
 	<dict>
-		<key>0A09AB4F-2D04-49E7-8F73-C241E34C22D9</key>
+		<key>14CCF7C0-AF7A-4588-A54B-27EA51BE6893</key>
 		<dict>
 			<key>auxiliaryLogUniqueIdentifier</key>
-			<string>F6C78866-8A5A-4380-9517-8E535E94963B</string>
+			<string>99499B16-BFB4-4991-B8DA-52FA4B5F4D9B</string>
 			<key>auxiliaryObservable</key>
 			<dict>
 				<key>highLevelStatus</key>
@@ -22,7 +22,7 @@
 			<key>domainType</key>
 			<string>com.apple.dt.IDE.LaunchSchemeAction</string>
 			<key>fileName</key>
-			<string>Run-Stocks-2023.02.15_16-35-36-+0800.xcresult</string>
+			<string>Run-Stocks-2023.02.16_19-11-20-+0800.xcresult</string>
 			<key>hasAuxiliaryLog</key>
 			<true/>
 			<key>hasConsoleLog</key>
@@ -43,18 +43,18 @@
 			<key>signature</key>
 			<string>Run Stocks</string>
 			<key>timeStartedRecording</key>
-			<real>698142936.92997599</real>
+			<real>698238680.38851702</real>
 			<key>timeStoppedRecording</key>
 			<real>0.0</real>
 			<key>title</key>
 			<string>Run Stocks</string>
 			<key>uniqueIdentifier</key>
-			<string>0A09AB4F-2D04-49E7-8F73-C241E34C22D9</string>
+			<string>14CCF7C0-AF7A-4588-A54B-27EA51BE6893</string>
 		</dict>
-		<key>D8BDC160-EC98-49D2-9CCD-1D9EE61838AA</key>
+		<key>2A512638-DD02-48DE-9F74-A3C3215DC6A8</key>
 		<dict>
 			<key>auxiliaryLogUniqueIdentifier</key>
-			<string>538F5E98-FB54-4B37-8248-35252BAF42F0</string>
+			<string>5C05DD93-3034-4296-B075-6571D77AC67C</string>
 			<key>auxiliaryObservable</key>
 			<dict>
 				<key>highLevelStatus</key>
@@ -67,7 +67,7 @@
 			<key>domainType</key>
 			<string>com.apple.dt.IDE.LaunchSchemeAction</string>
 			<key>fileName</key>
-			<string>Run-Stocks-2023.02.15_16-15-58-+0800.xcresult</string>
+			<string>Run-Stocks-2023.02.16_18-45-32-+0800.xcresult</string>
 			<key>hasAuxiliaryLog</key>
 			<true/>
 			<key>hasConsoleLog</key>
@@ -88,13 +88,103 @@
 			<key>signature</key>
 			<string>Run Stocks</string>
 			<key>timeStartedRecording</key>
-			<real>698141758.86865199</real>
+			<real>698237132.40406501</real>
 			<key>timeStoppedRecording</key>
 			<real>0.0</real>
 			<key>title</key>
 			<string>Run Stocks</string>
 			<key>uniqueIdentifier</key>
-			<string>D8BDC160-EC98-49D2-9CCD-1D9EE61838AA</string>
+			<string>2A512638-DD02-48DE-9F74-A3C3215DC6A8</string>
+		</dict>
+		<key>51A74C01-D1E6-4EF2-9B38-F9403C2ECD0E</key>
+		<dict>
+			<key>auxiliaryLogUniqueIdentifier</key>
+			<string>DAA8029A-A85C-43B8-9F0A-C5BB4AFE57F6</string>
+			<key>auxiliaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>className</key>
+			<string>IDESchemeActionsInvocationRecord</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>com.apple.dt.IDE.LaunchSchemeAction</string>
+			<key>fileName</key>
+			<string>Run-Stocks-2023.02.16_18-47-23-+0800.xcresult</string>
+			<key>hasAuxiliaryLog</key>
+			<true/>
+			<key>hasConsoleLog</key>
+			<true/>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Stocks project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Stocks</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run Stocks</string>
+			<key>timeStartedRecording</key>
+			<real>698237243.35330498</real>
+			<key>timeStoppedRecording</key>
+			<real>0.0</real>
+			<key>title</key>
+			<string>Run Stocks</string>
+			<key>uniqueIdentifier</key>
+			<string>51A74C01-D1E6-4EF2-9B38-F9403C2ECD0E</string>
+		</dict>
+		<key>F3C4179D-B2F6-4C35-B549-036391A1CED2</key>
+		<dict>
+			<key>auxiliaryLogUniqueIdentifier</key>
+			<string>E7DC178A-B015-4635-B225-F82C82D40126</string>
+			<key>auxiliaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>className</key>
+			<string>IDESchemeActionsInvocationRecord</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>com.apple.dt.IDE.LaunchSchemeAction</string>
+			<key>fileName</key>
+			<string>Run-Stocks-2023.02.16_19-49-21-+0800.xcresult</string>
+			<key>hasAuxiliaryLog</key>
+			<true/>
+			<key>hasConsoleLog</key>
+			<true/>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Stocks project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Stocks</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run Stocks</string>
+			<key>timeStartedRecording</key>
+			<real>698240961.49583304</real>
+			<key>timeStoppedRecording</key>
+			<real>0.0</real>
+			<key>title</key>
+			<string>Run Stocks</string>
+			<key>uniqueIdentifier</key>
+			<string>F3C4179D-B2F6-4C35-B549-036391A1CED2</string>
 		</dict>
 		<key>FE8B1B22-D010-44CC-8356-9985610D9D88</key>
 		<dict>
