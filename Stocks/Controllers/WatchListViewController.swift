@@ -14,7 +14,7 @@ final class WatchListViewController: UIViewController {
 
     private var panel: FloatingPanelController?
 
-    private var watchlistMap: [String: [String]] = [:]
+    private var watchlistMap: [String: [CandleStick]] = [:]
 
     private var viewModels: [String] = []
 
@@ -32,7 +32,7 @@ final class WatchListViewController: UIViewController {
         view.backgroundColor = .systemBackground
         setUpSearchController()
         setUpTableView()
-        setUpWatchListData()
+        fetchWatchListData()
         setUpFloatingPanel()
         setUpTitleVIew()
     }
@@ -64,13 +64,32 @@ final class WatchListViewController: UIViewController {
 
     // MARK: - Private
 
-    private func setUpWatchListData() {
+    private func fetchWatchListData() {
         let symbols = PersistenceManager.shared.watchlist
+
+        let group = DispatchGroup()
+
         for symbol in symbols {
-            watchlistMap[symbol] = ["some string"]
+            group.enter()
+            APICaller.shared.marketData(for: symbol) { [weak self] result in
+                defer {
+                    group.leave()
+                }
+
+                switch result {
+                case.success(let data):
+                    let candleSticks = data.candleSticks
+                    self?.watchlistMap[symbol] = candleSticks
+                case .failure(let error):
+                    print(error)
+                }
+            }
         }
 
-        tableView.reloadData()
+        group.notify(queue: .main) { [weak self] in
+            self?.tableView.reloadData()
+
+        }
     }
 
     private func setUpSearchController() {

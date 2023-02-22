@@ -24,20 +24,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use this method to select a configuration to create the new scene with.
         return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
     }
-
+    
     func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
     }
-
+    
     private func debug() {
-        APICaller.shared.news(for: .company(symbol: "MSFT")) { result in
-            switch result {
-            case .success(let news):
-                print(news.count)
-            case .failure: break
-            }
-        }
+        
     }
-
-
 }
 
