@@ -16,7 +16,7 @@ final class WatchListViewController: UIViewController {
 
     private var watchlistMap: [String: [CandleStick]] = [:]
 
-    private var viewModels: [String] = []
+    private var viewModels: [WatchListTableViewCell.ViewModel] = []
 
     private let tableView: UITableView = {
         let table = UITableView()
@@ -88,7 +88,29 @@ final class WatchListViewController: UIViewController {
 
         group.notify(queue: .main) { [weak self] in
             self?.tableView.reloadData()
+            self?.createViewModels()
+        }
+    }
 
+    private func createViewModels() {
+        var viewModels = [WatchListTableViewCell.ViewModel]()
+
+        for (symbol, candleSticks) in watchlistMap {
+            viewModels.append(
+                .init(symbol: symbol,
+                      companyName: UserDefaults.standard.string(forKey: symbol) ?? "Company",
+                      price: getLatestClosingPrice(from: candleSticks),
+                      changeColor: <#T##UIColor#>,
+                      changePercentage: <#T##String#>)
+            )
+        }
+
+        self.viewModels = viewModels
+    }
+
+    private func getLatestClosingPrice(from data: [CandleStick]) -> String {
+        guard let closingPrice = data.first?.close else {
+            return ""
         }
     }
 
