@@ -7,46 +7,64 @@
 
 import Foundation
 
-//["AAPL", "MSFT", "SNAP"]
-// [AAPL: Apple Inc.]
-
 final class PersistenceManager {
     static let shared = PersistenceManager()
+    private init() {}
 
     private let userDefaults: UserDefaults = .standard
 
-    private struct Constants {
-        static let onboardedKey = "hasOnboarded"
-        static let watchListKey = "watchlist"
+    private struct Contants {
+        static let onboarded = "hasOnboarded"
+        static let watchlist = "watchlist"
     }
-
-    private init() {}
-
-    // MARK: - Public
 
     public var watchlist: [String] {
         if !hasOnboarded {
-            userDefaults.set(true, forKey: Constants.onboardedKey)
-            setUpDefalts()
+            userDefaults.setValue(true, forKey: Contants.onboarded)
+            setUpDefaults()
         }
-        return userDefaults.stringArray(forKey: Constants.watchListKey) ?? []
+        return userDefaults.stringArray(forKey: Contants.watchlist) ?? []
     }
 
-    public func addToWatchlist() {
-
+    /// Stores watchlist in UserDefaults.standard
+    /// - Parameters:
+    ///   - symbol: String
+    ///   - companyName: String
+    public func addToWatchlist(symbol: String, companyName: String) {
+        var current = watchlist
+        current.append(symbol)
+        userDefaults.set(current, forKey: Contants.watchlist)
+        userDefaults.set(companyName, forKey: symbol)
+//        NotificationCenter.default.post(name: .didAddToWatchList, object: nil)
     }
 
-    public func removeFromWatchList() {
-
+    /// Check for symbol in watchlist
+    /// - Parameter symbol: String
+    /// - Returns: Bool
+    public func watchlistContains(symbol: String) -> Bool {
+        return watchlist.contains(symbol)
     }
 
-    // MARK: - Private
+    /// Removes symbol from watchlist and writes new watchlist to UserDefaults.standard
+    /// - Parameter symbol: String
+    public func removeFromWatchlist(symbol: String) {
+        userDefaults.set(nil, forKey: symbol)
 
+        var newList = [String]()
+        for item in watchlist where item != symbol {
+            newList.append(item)
+        }
+
+        userDefaults.set(newList, forKey: Contants.watchlist)
+    }
+
+    /// Set to true after first watchlist access
     private var hasOnboarded: Bool {
-        return userDefaults.bool(forKey: Constants.onboardedKey)
+        return userDefaults.bool(forKey: Contants.onboarded)
     }
 
-    private func setUpDefalts() {
+    /// Seed the watchlist with common symbols
+    private func setUpDefaults() {
         let map: [String: String] = [
             "AAPL": "Apple Inc",
             "MSFT": "Microsoft Corporation",
@@ -55,13 +73,13 @@ final class PersistenceManager {
             "AMZN": "Amazon.com Inc.",
             "WORK": "Slack Technologies",
             "FB": "Facebook",
-            "NVDA": "Nvidia",
+            "NVDA": "Nvidia Inc.",
             "NKE": "Nike",
             "PINS": "Pinterest Inc."
         ]
 
         let symbols = map.keys.map { $0 }
-        userDefaults.set(symbols, forKey: Constants.watchListKey)
+        userDefaults.set(symbols, forKey: Contants.watchlist)
 
         for (symbol, name) in map {
             userDefaults.set(name, forKey: symbol)

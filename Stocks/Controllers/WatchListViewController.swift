@@ -20,7 +20,7 @@ final class WatchListViewController: UIViewController {
 
     private let tableView: UITableView = {
         let table = UITableView()
-
+        table.register(WatchListTableViewCell.self, forCellReuseIdentifier: WatchListTableViewCell.identifier)
         return table
     }()
 
@@ -35,6 +35,11 @@ final class WatchListViewController: UIViewController {
         fetchWatchListData()
         setUpFloatingPanel()
         setUpTitleVIew()
+    }
+
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        tableView.frame = view.bounds
     }
 
     private func setUpTableView() {
@@ -69,7 +74,7 @@ final class WatchListViewController: UIViewController {
 
         let group = DispatchGroup()
 
-        for symbol in symbols {
+        for symbol in symbols where watchlistMap[symbol] == nil {
             group.enter()
             APICaller.shared.marketData(for: symbol) { [weak self] result in
                 defer {
@@ -87,8 +92,8 @@ final class WatchListViewController: UIViewController {
         }
 
         group.notify(queue: .main) { [weak self] in
-            self?.tableView.reloadData()
             self?.createViewModels()
+            self?.tableView.reloadData()
         }
     }
 
@@ -96,22 +101,42 @@ final class WatchListViewController: UIViewController {
         var viewModels = [WatchListTableViewCell.ViewModel]()
 
         for (symbol, candleSticks) in watchlistMap {
+            let changePercentage = getChangePercentage(symbol: symbol, data: candleSticks)
             viewModels.append(
                 .init(symbol: symbol,
                       companyName: UserDefaults.standard.string(forKey: symbol) ?? "Company",
                       price: getLatestClosingPrice(from: candleSticks),
-                      changeColor: <#T##UIColor#>,
-                      changePercentage: <#T##String#>)
+                      changeColor: changePercentage < 0 ? .systemRed : .systemGreen,
+                      changePercentage: String.percentage(from: changePercentage),
+                      chartViewModel: .init(data: candleSticks.reversed().map { $0.close }
+                                            , showLegend: false, showAxis: false))
             )
         }
-
+        print("\n\n\(viewModels)\n\n")
         self.viewModels = viewModels
+    }
+
+    private func getChangePercentage(symbol: String, data: [CandleStick]) -> Double {
+        let latestDate = data[0].date
+        // дата двое суток назад
+        let priorDate = Date().addingTimeInterval(-((3600 * 24) * 2))
+        guard let latestClose = data.first?.close,
+              let priorClose = data.first(where: {
+                  !Calendar.current.isDate($0.date, inSameDayAs: latestDate)
+              })?.close else {
+            return 0
+
+        }
+
+       let diff = 1 - (priorClose / latestClose)
+        return diff
     }
 
     private func getLatestClosingPrice(from data: [CandleStick]) -> String {
         guard let closingPrice = data.first?.close else {
             return ""
         }
+        return String.formatted(number: closingPrice)
     }
 
     private func setUpSearchController() {
@@ -180,15 +205,22 @@ extension WatchListViewController: FloatingPanelControllerDelegate {
 
 extension WatchListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return watchlistMap.count
+        return viewModels.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: WatchListTableViewCell.identifier, for: indexPath) as? WatchListTableViewCell else {
+            fatalError()
+        }
+        cell.configure(with: viewModels[indexPath.row])
+        return cell
+    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return WatchListTableViewCell.preferredHeight
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-
+        let viewModel = viewModels[indexPath.row]
     }
 }

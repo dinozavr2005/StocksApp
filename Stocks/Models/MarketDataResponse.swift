@@ -18,23 +18,29 @@ struct MarketDataResponse: Codable {
     enum CodingKeys: String, CodingKey {
         case open = "o"
         case close = "c"
-        case high = "h"
         case low = "l"
+        case high = "h"
         case status = "s"
         case timestamps = "t"
     }
 
     var candleSticks: [CandleStick] {
         var result = [CandleStick]()
+
         for index in 0..<open.count {
-            result.append(.init(date: Date(timeIntervalSince1970: timestamps[index]),
-                                high: high[index],
-                                low: low[index],
-                                open: open[index],
-                                close: close[index]))
+            result.append(
+                .init(
+                    date: Date(timeIntervalSince1970: timestamps[index]),
+                    high: high[index],
+                    low: low[index],
+                    open: open[index],
+                    close: close[index]
+                )
+            )
         }
-        let sortedData = result.sorted(by: { $0.date < $1.date })
-        return sortedData
+
+        let sorted = result.sorted { $0.date > $1.date }
+        return sorted
     }
 }
 
