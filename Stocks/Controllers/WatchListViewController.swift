@@ -24,6 +24,8 @@ final class WatchListViewController: UIViewController {
         return table
     }()
 
+    private var observer: NSObjectProtocol?
+
     // MARK: - Lifecycle
 
     override func viewDidLoad() {
@@ -35,6 +37,7 @@ final class WatchListViewController: UIViewController {
         fetchWatchListData()
         setUpFloatingPanel()
         setUpTitleVIew()
+        setUpObserver()
     }
 
     override func viewDidLayoutSubviews() {
@@ -42,10 +45,15 @@ final class WatchListViewController: UIViewController {
         tableView.frame = view.bounds
     }
 
-    private func setUpTableView() {
-        view.addSubview(tableView)
-        tableView.delegate = self
-        tableView.dataSource = self
+
+
+    // MARK: - Private
+
+    private func setUpObserver() {
+        observer = NotificationCenter.default.addObserver(forName: .didAddToWatchList, object: nil, queue: .main, using: { [weak self]_ in
+            self?.viewModels.removeAll()
+            self?.fetchWatchListData()
+        })
     }
 
     private func setUpFloatingPanel() {
@@ -64,10 +72,14 @@ final class WatchListViewController: UIViewController {
         titleView.addSubview(label)
         label.font = .systemFont(ofSize: 40, weight: .medium)
         navigationItem.titleView = titleView
-        
+
     }
 
-    // MARK: - Private
+    private func setUpTableView() {
+        view.addSubview(tableView)
+        tableView.delegate = self
+        tableView.dataSource = self
+    }
 
     private func fetchWatchListData() {
         let symbols = PersistenceManager.shared.watchlist
@@ -119,7 +131,7 @@ final class WatchListViewController: UIViewController {
     private func getChangePercentage(symbol: String, data: [CandleStick]) -> Double {
         let latestDate = data[0].date
         // дата двое суток назад
-        let priorDate = Date().addingTimeInterval(-((3600 * 24) * 2))
+//        let priorDate = Date().addingTimeInterval(-((3600 * 24) * 2))
         guard let latestClose = data.first?.close,
               let priorClose = data.first(where: {
                   !Calendar.current.isDate($0.date, inSameDayAs: latestDate)
@@ -190,7 +202,7 @@ extension WatchListViewController: SearchResultsViewControllerDelegate {
     func searchResultsViewControllerDidSelect(searchResult: SearchResult) {
         navigationItem.searchController?.searchBar.resignFirstResponder()
         // Present stock details
-        let vc = StockDetailsViewController()
+        let vc = StockDetailsViewController(symbol: searchResult.displaySymbol, companyName: searchResult.description)
         let navVC = UINavigationController(rootViewController: vc)
         vc.title = searchResult.description
         present(navVC, animated: true)
@@ -219,8 +231,31 @@ extension WatchListViewController: UITableViewDelegate, UITableViewDataSource {
         return WatchListTableViewCell.preferredHeight
     }
 
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+
+    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        return .delete
+    }
+
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            tableView.beginUpdates()
+            PersistenceManager.shared.removeFromWatchlist(symbol: viewModels[indexPath.row].symbol)
+            viewModels.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+            tableView.endUpdates()
+        }
+    }
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         let viewModel = viewModels[indexPath.row]
+        let vc = StockDetailsViewController(symbol: viewModel.symbol,
+                                            companyName: viewModel.companyName,
+                                            candleStickData: watchlistMap[viewModel.symbol] ?? [])
+        let navVC = UINavigationController(rootViewController: vc)
+        present(navVC, animated: true)
     }
 }

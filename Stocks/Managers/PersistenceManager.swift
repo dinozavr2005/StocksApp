@@ -35,7 +35,7 @@ final class PersistenceManager {
         current.append(symbol)
         userDefaults.set(current, forKey: Contants.watchlist)
         userDefaults.set(companyName, forKey: symbol)
-//        NotificationCenter.default.post(name: .didAddToWatchList, object: nil)
+        NotificationCenter.default.post(name: .didAddToWatchList, object: nil)
     }
 
     /// Check for symbol in watchlist
