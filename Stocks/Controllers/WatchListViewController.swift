@@ -124,7 +124,6 @@ final class WatchListViewController: UIViewController {
                                             , showLegend: false, showAxis: false))
             )
         }
-        print("\n\n\(viewModels)\n\n")
         self.viewModels = viewModels
     }
 
