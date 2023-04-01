@@ -29,6 +29,7 @@
 		E78BBEE42984142F0072B252 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78BBEE32984142F0072B252 /* Extensions.swift */; };
 		E78BBEE62987BAF40072B252 /* SearchResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78BBEE52987BAF40072B252 /* SearchResultTableViewCell.swift */; };
 		E78BBEE82987D7D70072B252 /* SearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78BBEE72987D7D70072B252 /* SearchResponse.swift */; };
+		E790F0DB29D6CB6600DFB41B /* MetricCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E790F0DA29D6CB6600DFB41B /* MetricCollectionViewCell.swift */; };
 		E7CDE81229C7564C001E892D /* StockChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CDE81129C7564C001E892D /* StockChartView.swift */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +59,7 @@
 		E78BBEE32984142F0072B252 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		E78BBEE52987BAF40072B252 /* SearchResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultTableViewCell.swift; sourceTree = "<group>"; };
 		E78BBEE72987D7D70072B252 /* SearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponse.swift; sourceTree = "<group>"; };
+		E790F0DA29D6CB6600DFB41B /* MetricCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricCollectionViewCell.swift; sourceTree = "<group>"; };
 		E7CD0153262934F726B7FBB0 /* Pods_Stocks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Stocks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7CDE81129C7564C001E892D /* StockChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockChartView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -143,6 +145,7 @@
 				E74FDF5329ACB61100EE26CD /* WatchListTableViewCell.swift */,
 				E7CDE81129C7564C001E892D /* StockChartView.swift */,
 				E7351C2A29D5D6CE00A8D08E /* StockDetailHeaderView.swift */,
+				E790F0DA29D6CB6600DFB41B /* MetricCollectionViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -295,6 +298,7 @@
 			files = (
 				E7159B9E29A6141700C07A00 /* MarketDataResponse.swift in Sources */,
 				E78BBEE22983D5330072B252 /* HapticsManager.swift in Sources */,
+				E790F0DB29D6CB6600DFB41B /* MetricCollectionViewCell.swift in Sources */,
 				E78BBEE62987BAF40072B252 /* SearchResultTableViewCell.swift in Sources */,
 				E78BBEDC2983CF350072B252 /* StockDetailsViewController.swift in Sources */,
 				E78BBEC32983CD120072B252 /* WatchListViewController.swift in Sources */,

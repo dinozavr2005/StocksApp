@@ -6,7 +6,7 @@
 	<integer>10</integer>
 	<key>logs</key>
 	<dict>
-		<key>C2B05B08-4EB4-4956-9143-CF8E34B00537</key>
+		<key>C893AF93-A38E-4A62-B87A-D8E9FD9F2BA6</key>
 		<dict>
 			<key>className</key>
 			<string>IDEActivityLogSection</string>
@@ -15,13 +15,13 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
 			<key>fileName</key>
-			<string>C2B05B08-4EB4-4956-9143-CF8E34B00537.xcactivitylog</string>
+			<string>C893AF93-A38E-4A62-B87A-D8E9FD9F2BA6.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
 			<dict>
 				<key>highLevelStatus</key>
-				<string>W</string>
+				<string>S</string>
 			</dict>
 			<key>schemeIdentifier-containerName</key>
 			<string>Stocks project</string>
@@ -32,13 +32,13 @@
 			<key>signature</key>
 			<string>Build Stocks</string>
 			<key>timeStartedRecording</key>
-			<real>701882341.22716796</real>
+			<real>701958938.26607001</real>
 			<key>timeStoppedRecording</key>
-			<real>701882342.44115198</real>
+			<real>701958939.42774403</real>
 			<key>title</key>
 			<string>Build Stocks</string>
 			<key>uniqueIdentifier</key>
-			<string>C2B05B08-4EB4-4956-9143-CF8E34B00537</string>
+			<string>C893AF93-A38E-4A62-B87A-D8E9FD9F2BA6</string>
 		</dict>
 	</dict>
 </dict>

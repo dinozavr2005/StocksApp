@@ -24,6 +24,9 @@ class StockDetailsViewController: UIViewController {
     }()
 
     private var stories: [NewsStory] = []
+
+    private var metrics: Metrics?
+
     // MARK: - Init
 
     init(
@@ -89,7 +92,7 @@ class StockDetailsViewController: UIViewController {
             switch result {
             case .success(let response):
                 let metrics = response.metric
-                print(metrics)
+                self?.metrics = metrics
             case .failure(let error):
                 print(error)
             }
@@ -118,6 +121,17 @@ class StockDetailsViewController: UIViewController {
     private func renderChart() {
         let headerView = StockDetailHeaderView(frame: CGRect(x: 0, y: 0,
                                                              width: view.width, height: (view.width * 0.7) + 100))
+        var viewModels = [MetricCollectionViewCell.ViewModel]()
+        if let metrics = metrics {
+            viewModels.append(.init(name: "52W Heigh", value: "\(metrics.AnnualWeekHigh)"))
+            viewModels.append(.init(name: "52L Heigh", value: "\(metrics.AnnualWeekLow)"))
+            viewModels.append(.init(name: "52W Return", value: "\(metrics.AnnualWeekPriceReturnDaily)"))
+            viewModels.append(.init(name: "Beta", value: "\(metrics.beta)"))
+            viewModels.append(.init(name: "10D Vol.", value: "\(metrics.TenDayAverageTradingVolume)"))
+        }
+
+        headerView.configure(chartViewModel: .init(data: [], showLegend: false, showAxis: false),
+                             metricViewModels: viewModels)
         tableView.tableHeaderView = headerView
     }
 
@@ -143,9 +157,10 @@ extension StockDetailsViewController: NewsHeaderViewDelegate {
 // MARK: - TableView Delegates
 
 extension StockDetailsViewController: UITableViewDelegate, UITableViewDataSource {
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
+
+//    func numberOfSections(in tableView: UITableView) -> Int {
+//        return 1
+//    }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return stories.count
