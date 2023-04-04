@@ -110,6 +110,11 @@ final class APICaller {
         case unknownError
     }
 
+    /// Retrieve a URL for the specified endpoint
+    /// - Parameters:
+    ///   - endpoint: pre-defined endpoint String
+    ///   - queryParams:dictionary of parameters to add to query string. Automatically adds API key.
+    /// - Returns: URL
     private func url(for endpoint: Endpoint, queryParams: [String: String] = [:]) -> URL? {
         var urlString = Constants.baseUrl + endpoint.rawValue
 
@@ -126,7 +131,12 @@ final class APICaller {
 
         return URL(string: urlString)
     }
-
+    
+    /// Performs API call to <url>, decoding a <expecting>, and executing <completion> on completion.
+    /// - Parameters:
+    ///   - url: URL
+    ///   - expecting: decoded type
+    ///   - completion: closure accepting a Result<T>
     private func request<T: Codable>(
         url: URL?,
         expecting: T.Type,
