@@ -6,10 +6,10 @@
 	<integer>10</integer>
 	<key>logs</key>
 	<dict>
-		<key>21A1B836-3D89-4486-8F6F-9466CDFACF94</key>
+		<key>43AAB8E7-4999-4C08-9045-7BC9CE44FFDC</key>
 		<dict>
 			<key>auxiliaryLogUniqueIdentifier</key>
-			<string>EE36A3AD-3ADD-46AD-93B7-D6B6F492812D</string>
+			<string>621EF234-6F15-42ED-8746-9999176420C9</string>
 			<key>auxiliaryObservable</key>
 			<dict>
 				<key>highLevelStatus</key>
@@ -22,7 +22,7 @@
 			<key>domainType</key>
 			<string>com.apple.dt.IDE.LaunchSchemeAction</string>
 			<key>fileName</key>
-			<string>Run-Stocks-2023.04.02_11-00-20-+0300.xcresult</string>
+			<string>Run-Stocks-2023.04.04_11-35-17-+0300.xcresult</string>
 			<key>hasAuxiliaryLog</key>
 			<true/>
 			<key>hasConsoleLog</key>
@@ -43,13 +43,13 @@
 			<key>signature</key>
 			<string>Run Stocks</string>
 			<key>timeStartedRecording</key>
-			<real>702115220.51005995</real>
+			<real>702290117.13484204</real>
 			<key>timeStoppedRecording</key>
 			<real>0.0</real>
 			<key>title</key>
 			<string>Run Stocks</string>
 			<key>uniqueIdentifier</key>
-			<string>21A1B836-3D89-4486-8F6F-9466CDFACF94</string>
+			<string>43AAB8E7-4999-4C08-9045-7BC9CE44FFDC</string>
 		</dict>
 	</dict>
 </dict>

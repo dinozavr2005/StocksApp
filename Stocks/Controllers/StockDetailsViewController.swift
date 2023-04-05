@@ -173,8 +173,8 @@ extension StockDetailsViewController: NewsHeaderViewDelegate {
     func newsHeaderViewDidTapAddButton(_ headerView: NewsHeaderView) {
         headerView.button.isHidden = true
         PersistenceManager.shared.addToWatchlist(symbol: symbol, companyName: companyName)
-//
-//        HapticsService.shared.vibrate(for: .success)
+
+        HapticsManager.shared.vibrate(for: .success)
 
         let alert = UIAlertController(title: "Added to watchlist", message: "We've added \(companyName) to your watchlist", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel))
@@ -182,7 +182,7 @@ extension StockDetailsViewController: NewsHeaderViewDelegate {
     }
 }
 
-// MARK: - TableView Delegates
+// MARK: - UITableViewDelegate
 
 extension StockDetailsViewController: UITableViewDelegate, UITableViewDataSource {
 
@@ -223,7 +223,7 @@ extension StockDetailsViewController: UITableViewDelegate, UITableViewDataSource
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
 
-//        HapticsService.shared.vibrateForSelection()
+        HapticsManager.shared.vibrateForSelection()
 
         guard let url = URL(string: stories[indexPath.row].url) else {
             return
